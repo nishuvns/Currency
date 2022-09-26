@@ -28,16 +28,16 @@ class ConversionScreen : Fragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding =  DataBindingUtil.inflate(inflater,
-            R.layout.fragment_conversion_screen, container, false)
+        binding =  DataBindingUtil.inflate(inflater, R.layout.fragment_conversion_screen, container, false)
+
         observe()
 
 
         binding.btnSwap.setOnClickListener {
-           var firstPosition = binding.fromSpin.selectedItemPosition
-            var secondPosition = binding.twoSpin.selectedItemPosition
-            binding.fromSpin.setSelection(secondPosition)
-            binding.twoSpin.setSelection(firstPosition)
+            if (binding.fromSpin.selectedItem != null && binding.twoSpin.selectedItem != null) {
+                binding.fromSpin.setSelection(binding.twoSpin.selectedItemPosition)
+                binding.twoSpin.setSelection(binding.fromSpin.selectedItemPosition)
+            }
         }
 
 
