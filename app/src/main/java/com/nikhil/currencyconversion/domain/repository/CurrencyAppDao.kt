@@ -1,4 +1,4 @@
-package com.nikhil.currencyconversion.data.local
+package com.nikhil.currencyconversion.domain.repository
 
 import androidx.room.Dao
 import androidx.room.Insert

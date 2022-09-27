@@ -1,7 +1,7 @@
-package com.nikhil.currencyconversion.di
+package com.nikhil.currencyconversion.data.di
 
-import com.nikhil.currencyconversion.data.CurrencyService
-import com.nikhil.currencyconversion.data.CurrencyService.Companion.ENDPOINT
+import com.nikhil.currencyconversion.data.network.CurrencyService
+import com.nikhil.currencyconversion.util.Constant.ENDPOINT
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,8 +27,8 @@ object ApiModule {
     fun provideOkHttpClient(logging: HttpLoggingInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(logging)
-            .connectTimeout(15, TimeUnit.SECONDS) // connect timeout
-            .readTimeout(15, TimeUnit.SECONDS)
+            .connectTimeout(35, TimeUnit.SECONDS) // connect timeout
+            .readTimeout(35, TimeUnit.SECONDS)
             .build()
     }
 

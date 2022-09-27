@@ -1,8 +1,8 @@
-package com.nikhil.currencyconversion.di
+package com.nikhil.currencyconversion.data.di
 
 import android.app.Application
 import androidx.room.Room
-import com.nikhil.currencyconversion.data.local.CurrencyAppDao
+import com.nikhil.currencyconversion.domain.repository.CurrencyAppDao
 import com.nikhil.currencyconversion.data.local.CurrencyAppDatabase
 import dagger.Module
 import dagger.Provides
@@ -24,7 +24,7 @@ object DatabaseModule {
     }
 
     @Provides
-    fun provideMovieAppDao(db: CurrencyAppDatabase): CurrencyAppDao{
+    fun provideMovieAppDao(db: CurrencyAppDatabase): CurrencyAppDao {
         return db.getCurrencyDatabase()
     }
 }

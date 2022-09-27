@@ -1,8 +1,10 @@
-package com.nikhil.currencyconversion.data
+package com.nikhil.currencyconversion.data.network
 
 import com.nikhil.currencyconversion.data.model.ConvertResponse
 import com.nikhil.currencyconversion.data.model.OtherCurrencies
 import com.nikhil.currencyconversion.data.model.SymbolResponse
+import com.nikhil.currencyconversion.util.Constant.APIKEY
+import com.nikhil.currencyconversion.util.Constant.KEY_VALUE
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -11,12 +13,6 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface CurrencyService {
-
-    companion object {
-        const val ENDPOINT = "https://api.apilayer.com/fixer/"
-        const val APIKEY =  "apikey"
-        const val KEY_VALUE = "hcmcsd94DX5ockD2DFswq6fIYB7Det6z"
-    }
     @Headers( "$APIKEY: $KEY_VALUE")
     @GET("symbols")
     suspend fun getSymbols(): Response<SymbolResponse>

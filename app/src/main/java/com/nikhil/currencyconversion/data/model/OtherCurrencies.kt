@@ -30,6 +30,8 @@ data class OtherCurrencies(
     */
     fun getRates(): ArrayList<Rates> {
         var listCountry = ArrayList<Rates>()
+
+
         for (item in rates.keySet()) {
             listCountry.add(Rates(item, rates.get(item).asString))
         }

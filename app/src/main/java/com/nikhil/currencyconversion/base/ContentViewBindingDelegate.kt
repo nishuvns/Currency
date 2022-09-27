@@ -1,4 +1,4 @@
-package com.nikhil.currencyconversion.util
+package com.nikhil.currencyconversion.base
 
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.nikhil.currencyconversion.ui.adapter
+package com.nikhil.currencyconversion.presentation.adapter
 
 import com.nikhil.currencyconversion.R
 import com.nikhil.currencyconversion.base.BaseRecyclerViewAdapter

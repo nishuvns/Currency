@@ -1,4 +1,4 @@
-package com.nikhil.currencyconversion.ui.adapter
+package com.nikhil.currencyconversion.presentation.adapter
 
 
 import android.content.Context
@@ -38,7 +38,7 @@ import com.nikhil.currencyconversion.data.model.Symbols
 //    }
 //}
 
-class SymbolAdapter(val context: Context, var dataSource: ArrayList<Symbols>) : BaseAdapter() {
+class SymbolAdapter(val context: Context, var dataSource: List<Symbols>) : BaseAdapter() {
 
     private val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 

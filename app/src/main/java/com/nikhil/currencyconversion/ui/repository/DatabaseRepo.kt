@@ -1,7 +1,7 @@
 package com.nikhil.currencyconversion.ui.repository
 
 import androidx.annotation.WorkerThread
-import com.nikhil.currencyconversion.data.local.CurrencyAppDao
+import com.nikhil.currencyconversion.domain.repository.CurrencyAppDao
 import com.nikhil.currencyconversion.data.model.ConvertModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

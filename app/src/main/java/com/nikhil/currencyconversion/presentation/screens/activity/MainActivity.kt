@@ -1,4 +1,4 @@
-package com.nikhil.currencyconversion.ui
+package com.nikhil.currencyconversion.presentation.screens.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

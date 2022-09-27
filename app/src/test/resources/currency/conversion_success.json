@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "query": {
+    "from": "INR",
+    "to": "CAD",
+    "amount": 50000
+  },
+  "info": {
+    "timestamp": 1664221084,
+    "rate": 0.016828
+  },
+  "date": "2022-09-26",
+  "result": 841.4
+}

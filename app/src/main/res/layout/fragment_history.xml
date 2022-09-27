@@ -14,8 +14,15 @@
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="130dp"
-            android:background="@color/black"
-            android:orientation="vertical" />
+            android:gravity="center"
+            android:orientation="vertical" >
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:text="CHART FOR CURRENCY"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -51,7 +58,6 @@
             android:layout_centerHorizontal="true" />
 
         <androidx.core.widget.ContentLoadingProgressBar
-            android:visibility="invisible"
             android:id="@+id/progress_bar"
             style="?android:attr/progressBarStyleSmall"
             android:layout_width="100dp"

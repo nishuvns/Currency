@@ -1,4 +1,4 @@
-package com.nikhil.currencyconversion.ui.fragments
+package com.nikhil.currencyconversion.presentation.screens.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,9 +12,9 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nikhil.currencyconversion.R
 import com.nikhil.currencyconversion.databinding.FragmentHistoryBinding
-import com.nikhil.currencyconversion.ui.adapter.CurrencyAdapter
-import com.nikhil.currencyconversion.ui.adapter.OtherCurriencesAdapter
-import com.nikhil.currencyconversion.ui.viewmodel.CurrencyViewModel
+import com.nikhil.currencyconversion.presentation.adapter.CurrencyAdapter
+import com.nikhil.currencyconversion.presentation.adapter.OtherCurriencesAdapter
+import com.nikhil.currencyconversion.presentation.viewmodel.CurrencyViewModel
 import com.nikhil.currencyconversion.util.Resource
 
 class History : Fragment() {
@@ -48,8 +48,8 @@ class History : Fragment() {
     }
 
     private fun observe() {
-        observerCurrencyList()
-        observerOtherCurrencyList()
+    observerCurrencyList()
+       observerOtherCurrencyList()
     }
 
     private fun observerCurrencyList() {
@@ -85,7 +85,7 @@ class History : Fragment() {
                     binding.progressBar.visibility = View.GONE
                     binding.recyOtherCurrency.adapter = adapterOtherCurriencesAdapter
                     binding.recyOtherCurrency.layoutManager = LinearLayoutManager(activity)
-                    it.data?.let { it1 -> adapterOtherCurriencesAdapter.addItems(it1.getRates()) }
+                    it.data?.let { it1 -> adapterOtherCurriencesAdapter.addItems( it1.subList(0,10)) }
                 }
 
                 is Resource.Error -> {
