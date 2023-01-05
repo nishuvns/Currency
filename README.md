@@ -1,7 +1,7 @@
 # Currency Conversion
 
 Currency Conversion with Hilt Room Database, Coroutine,View Model, Data Binding with delegation
-Nikhil Keshari
+Nikhil Kumar Keshari
 Built With 🛠
 Kotlin - First class and official programming language for Android development.
 Coroutines - For asynchronous and more..
